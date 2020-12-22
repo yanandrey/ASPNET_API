@@ -11,7 +11,7 @@ namespace APIRest_ASPNET5.Business.Implementations
 {
     public class LoginBusinessImplementation : ILoginBusiness
     {
-        private const string DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+        private const string DATE_FORMAT = "dd/MM/yyyy hh:mm:ss";
         private TokenConfiguration _configuration;
 
         private IEmployeeRepository _repository;
