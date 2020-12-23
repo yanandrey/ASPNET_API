@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using APIRest_ASPNET5.Data.VO;
 using APIRest_ASPNET5.Hypermedia.Filters;
+using APIRest_ASPNET5.Models;
 
 namespace APIRest_ASPNET5.Controllers
 {

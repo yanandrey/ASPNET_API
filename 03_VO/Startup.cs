@@ -18,6 +18,7 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using APIRest_ASPNET5.Filters;
 
 namespace APIRest_ASPNET5
 {
@@ -85,6 +86,11 @@ namespace APIRest_ASPNET5
             filterOptions.ContentResponseEnricherList.Add(new ClientEnricher());
             filterOptions.ContentResponseEnricherList.Add(new VehicleEnricher());
             services.AddSingleton(filterOptions);
+
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(typeof(ExceptionFilter));
+            });
         }
 
 
