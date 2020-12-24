@@ -3,6 +3,6 @@ CREATE TABLE `client` (
 	`name` VARCHAR(50) NOT NULL,
 	`cnh` VARCHAR(50) NOT NULL,
 	`email` VARCHAR(50) NOT NULL,
-	`gender` VARCHAR(50) NOT NULL,
+	`gender` VARCHAR(10) NOT NULL,
 	PRIMARY KEY (`id`)
 )

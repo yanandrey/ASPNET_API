@@ -1,4 +1,5 @@
-﻿using APIRest_ASPNET5.Models.Base;
+﻿using System.ComponentModel.DataAnnotations;
+using APIRest_ASPNET5.Models.Base;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace APIRest_ASPNET5.Models
@@ -6,18 +7,23 @@ namespace APIRest_ASPNET5.Models
     [Table("client")]
     public class Client : BaseEntity
     {        
-        [Column("name")]
+        [Required]
+        [Column("name", TypeName = "varchar(50)")]
         public string Name { get; set; }
 
-        [Column("cnh")]
+        [Required]
+        [Column("cnh", TypeName = "varchar(50)")]
         public string CNH { get; set; }
 
-        [Column("email")]
+        [Required]
+        [Column("email", TypeName = "varchar(50)")]
         public string Email { get; set; }
 
-        [Column("gender")]
+        [Required]
+        [Column("gender", TypeName = "varchar(10)")]
         public string Gender { get; set; }
 
+        [Required]
         [Column("enabled")]
         public bool Enabled { get; set; }
     }
